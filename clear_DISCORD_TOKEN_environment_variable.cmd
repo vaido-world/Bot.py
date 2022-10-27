@@ -1,0 +1,3 @@
+@ECHO OFF
+setx DISCORD_TOKEN ""
+pause
