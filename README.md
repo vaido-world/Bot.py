@@ -5,7 +5,8 @@ Released into Public Domain. No rights reserved.
 ## OAuth2 URL Generated Link
 Invite this bot into your server.  
 A Bot.py temporary hosted by me.  
-[![Add to Server](https://user-images.githubusercontent.com/21064622/199047687-7375bec1-d560-44e9-a094-08022739e46a.png)](https://discord.com/api/oauth2/authorize?client_id=1034842957410484345&permissions=0&scope=bot)  
+[![Add to Server2](https://user-images.githubusercontent.com/21064622/199076125-2af8b9c9-7be1-498c-b93a-8493fe4c3135.png)](https://discord.com/api/oauth2/authorize?client_id=1034842957410484345&permissions=0&scope=bot)  
+
 
 
 ## Self hosting
