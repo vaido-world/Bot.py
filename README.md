@@ -1,3 +1,10 @@
+## OAuth2 URL Generated Link
+> Invite this bot into your server.  
+>  A Bot.py temporary hosted by me.  
+  
+[![Add to Server2](https://user-images.githubusercontent.com/21064622/199076125-2af8b9c9-7be1-498c-b93a-8493fe4c3135.png)](https://discord.com/api/oauth2/authorize?client_id=1034842957410484345&permissions=0&scope=bot)  
+
+
 # Bot.py
 General purpose bot written in Python for Discord.  
 
@@ -8,13 +15,6 @@ Released into Public Domain. No rights reserved.
 | bot.py  | Main project file.                |
 | bot.cmd | Windows Script to launch the bot. |
 | bot.sh  | Linux Script to launch the bot.   |
-
-## OAuth2 URL Generated Link
-> Invite this bot into your server.  
->  A Bot.py temporary hosted by me.  
-  
-[![Add to Server2](https://user-images.githubusercontent.com/21064622/199076125-2af8b9c9-7be1-498c-b93a-8493fe4c3135.png)](https://discord.com/api/oauth2/authorize?client_id=1034842957410484345&permissions=0&scope=bot)  
-
 
 
 ## Self hosting
