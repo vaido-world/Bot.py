@@ -14,6 +14,7 @@ Bot.py temporary hosted by me.
 4. Click **Add Bot** button.
 5. Click **Reset Token** button.
 6. Click **Copy** button.
+7. Use **Left Mouse Button** to paste the Bot Token. 
 
 ## Misc Links
 [![Developer_Portal](https://user-images.githubusercontent.com/21064622/199046604-c4221e9f-11e5-4f07-8526-fe8e2245a8b0.png)  
