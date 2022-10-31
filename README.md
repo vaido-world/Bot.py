@@ -3,6 +3,12 @@ General purpose bot written in Python for Discord.
 
 Released into Public Domain. No rights reserved.
 
+| File    | description                       |
+|---------|-----------------------------------|
+| bot.py  | Main project file.                |
+| bot.cmd | Windows Script to launch the bot. |
+| bot.sh  | Linux Script to launch the bot.   |
+
 ## OAuth2 URL Generated Link
 > Invite this bot into your server.  
 >  A Bot.py temporary hosted by me.  
