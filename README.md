@@ -1,5 +1,5 @@
 ![image](https://user-images.githubusercontent.com/21064622/199091107-68829c2c-4ef0-455e-941f-bee7a9c83789.png)
-
+A basic bot with features like: Member Welcome and Member Quit messages. 
 
 ## OAuth2 URL Generated Link
 > Invite this bot into your server.  
