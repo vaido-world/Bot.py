@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/21064622/199091107-68829c2c-4ef0-455e-941f-bee7a9c83789.png)
+![image](https://user-images.githubusercontent.com/21064622/199093785-268200ea-1eac-4cbb-97ef-1f151a16ec75.png)
 A basic bot with features like: Member Welcome and Member Quit messages. 
 
 ## OAuth2 URL Generated Link
