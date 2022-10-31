@@ -16,6 +16,16 @@ Bot.py temporary hosted by me.
 6. Click **Copy** button.
 7. Use **Left Mouse Button** to paste the Bot Token. 
 
+### Bot Hosting requirements
+* Python 3
+
+### Bot Hosting: How To
+1. Download Bot.py Source Code.
+2. Double click `bot.cmd` file.
+3. Insert Bot Token.
+4. Invite Bot into your server.
+4. Check if the Bot is Online. 
+
 ## Misc Links
 [![Developer_Portal](https://user-images.githubusercontent.com/21064622/199046604-c4221e9f-11e5-4f07-8526-fe8e2245a8b0.png)  
 Discord Bot Developer Portal](https://discord.com/developers/applications)
