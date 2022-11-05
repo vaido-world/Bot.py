@@ -28,7 +28,7 @@ Released into Public Domain. No rights reserved.
 
 
 ## Self hosting
-### Bot Token Retrieval
+### 1. Bot Token Retrieval
 1. Open [Discord Bot Developer Portal](https://discord.com/developers/applications) page.
 2. Press the **New Application** button. 
 3. Open **Bot** Tab.
@@ -40,14 +40,14 @@ Released into Public Domain. No rights reserved.
 ### Bot Hosting requirements
 * Python 3
 
-### Bot Hosting: How To
+### 2. Bot Hosting: How To
 1. Download Bot.py Source Code.
 2. Double click `bot.cmd` file.
 3. Insert **Bot Token**.
 4. Invite Bot into your server.
 5. Check if the Bot is Online. 
 
-### Bot Hosting: Inviting Bot
+### 3. Bot Hosting: Inviting Bot
 1. Open [Discord Bot Developer Portal](https://discord.com/developers/applications) page.
 2. Select your Bot.
 3. Open **OAuth2** button.
