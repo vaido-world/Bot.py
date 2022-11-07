@@ -23,8 +23,8 @@ Released into Public Domain. No rights reserved.
 | File    | description                       |
 |---------|-----------------------------------|
 | bot.py  | Main project file.                |
-| start_bot.cmd | Windows Script to launch the bot. |
-| toggle_bot.sh  | Linux Script to launch or stop the bot.   |
+| start-bot.cmd | Windows Script to launch the bot. |
+| toggle-bot.sh  | Linux Script to launch or stop the bot.   |
 
 
 ## Self hosting
