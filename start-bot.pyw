@@ -38,8 +38,8 @@ print("test2")
 #os.waitpid(p.pid, 0)
 
 
-import os
-os.system('python ./bot.py')
+#import os
+#os.system('python ./bot.py')
 input('Enter to exit from Python script...')
 
 #print("test2")
@@ -48,4 +48,8 @@ input('Enter to exit from Python script...')
 # start the script directly with python ./bot.py
 # redirect output to the newly ran cmd 
 # cmd python ./bot.py
-subprocess.run('cmd', shell=True, stdout=PIPE, stderr=PIPE, stdin=PIPE, creationflags=CREATE_NEW_CONSOLE)
+subprocess.run('python ./bot.py', shell=True, stdout=PIPE, stderr=PIPE, stdin=PIPE, creationflags=CREATE_NEW_CONSOLE)
+
+# Spawn a new command line window | or merge into current one
+# Redirect stdout to the new command line
+# Run python . bot.py in it.
