@@ -13,5 +13,6 @@ sys.stdout=open("./data/start-bot.log","a")
 sys.stderr=open("./data/start-bot.log","a")
 
 import os
-os.system('python ./bot.py && pause')
+if sys.platform == "win32":
+    os.system('python ./bot.py && pause')
 
