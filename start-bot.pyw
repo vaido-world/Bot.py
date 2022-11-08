@@ -15,4 +15,6 @@ sys.stderr=open("./data/start-bot.log","a")
 import os
 if sys.platform == "win32":
     os.system('python ./bot.py && pause')
-
+    
+if sys.platform == "linux":
+    os.system('nohup python3 ./bot.py > bot.log 2>&1 &')
