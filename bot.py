@@ -40,7 +40,8 @@ def main():
     import sys
     if sys.platform == "linux"
         print("Check if token is valid then fork the process,get the pid and exit ")
-
+        #if pid = os.fork():
+        #    sys.exit()
 if __name__ == "__main__":
     main()
 
