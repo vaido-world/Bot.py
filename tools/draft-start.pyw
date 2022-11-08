@@ -66,9 +66,7 @@ print("test2")
 #os.waitpid(p.pid, 0)
 
 
-#import os
-#os.system('python ./bot.py')
-#input('Enter to exit from Python script...')
+
 
 #print("test2")
 
