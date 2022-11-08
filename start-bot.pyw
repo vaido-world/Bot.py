@@ -4,9 +4,11 @@
 # instead of PYTHON.EXE in order to prevent a DOS console from popping up to display the output. 
 # https://docs.python.org/3/whatsnew/2.2.html
 
+
 import datetime
 with open('./data/start-bot.log', 'a') as logfile:
     logfile.write(str(datetime.datetime.now()) + "\n")
+    
 
 import sys
 sys.stdout=open("./data/start-bot.log","a")
