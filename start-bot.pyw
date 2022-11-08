@@ -17,4 +17,11 @@ if sys.platform == "win32":
     os.system('python ./bot.py && pause')
     
 if sys.platform == "linux":
-    os.system('nohup python3 ./bot.py > bot.log 2>&1 &')
+    if os.path.isfile("./data/pid"):
+        with open('./data/pid', 'r') as file:
+            oldpid = file.read()
+        os.system('kill -9 ' + oldpid)
+        
+    pid = os.system('nohup python3 ./bot.py > bot.log 2>&1 &')
+    with open('./data/pid', 'w') as file:
+        file.write(pid)
