@@ -20,8 +20,8 @@ if sys.platform == "linux":
     if os.path.isfile("./data/pid"):
         with open('./data/pid', 'r') as file:
             oldpid = file.read()
-        os.system('kill -9 ' + oldpid)
+        os.system('kill -9 ' + str(oldpid))
         
     pid = os.system('nohup python3 ./bot.py > bot.log 2>&1 &')
     with open('./data/pid', 'w') as file:
-        file.write(pid)
+        file.write(str(pid))
