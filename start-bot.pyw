@@ -43,4 +43,9 @@ os.system('python ./bot.py')
 input('Enter to exit from Python script...')
 
 #print("test2")
+
+
+# start the script directly with python ./bot.py
+# redirect output to the newly ran cmd 
+# cmd python ./bot.py
 subprocess.run('cmd', shell=True, stdout=PIPE, stderr=PIPE, stdin=PIPE, creationflags=CREATE_NEW_CONSOLE)
