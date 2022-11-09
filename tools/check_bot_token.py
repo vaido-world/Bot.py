@@ -16,7 +16,6 @@ def main():
     except discord.errors.LoginFailure:
        import os
        print("The wrong credentials are passed.")
-       os._exit(1)
        pass
 
 # Each function is a walkaround for "Event loop is Closed" Error.
