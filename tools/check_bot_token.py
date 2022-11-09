@@ -1,3 +1,4 @@
+import tools.windows_tweak
 from discord.ext.commands import *
 
 
@@ -16,14 +17,7 @@ def main():
        print("The wrong credentials are passed.")
        pass
 
-# Each function is a walkaround for "Event loop is Closed" Error.
-def set_event_loop_policy():
-    # Set the policy to prevent "Event loop is closed" error on Windows
-    # https://github.com/Rapptz/discord.py/issues/5209
-    import platform
-    import asyncio
-    if platform.system() == 'Windows':
-        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
 
 
 def handle_keyboard_interrupt():
@@ -35,6 +29,5 @@ def handle_keyboard_interrupt():
     signal.signal(signal.SIGINT, signal_handler)
 
 if __name__ == '__main__':
-    set_event_loop_policy()
     #handle_keyboard_interrupt()
     main()
