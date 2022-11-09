@@ -2,19 +2,17 @@ from discord.ext.commands import *
 
 
 def main():
+
+    import discord
+
+    intents = discord.Intents.default()
+    intents.members = True
+    intents.message_content = True
+
+    bot = Bot(command_prefix='$', intents=intents)
     try:
-        import discord
-
-        intents = discord.Intents.default()
-        intents.members = True
-        intents.message_content = True
-
-        bot = Bot(command_prefix='$', intents=intents)
-
         bot.run(token="MTAzNDg0Mjk1NzQxMDQ4ND78M0NQ.GjjeVF.7SDjDt35dkcowQn7865dxQQXYgSOlQqnbZONOH12w0")
-
     except discord.errors.LoginFailure:
-       import os
        print("The wrong credentials are passed.")
        pass
 
