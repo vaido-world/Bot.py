@@ -38,7 +38,7 @@ def main():
     bot = commands.Bot(command_prefix='?', description=description, intents=intents)
     bot.run(os.getenv('DISCORD_TOKEN'))
     import sys
-    if sys.platform == "linux"
+    if sys.platform == "linux":
         print("Check if token is valid then fork the process,get the pid and exit ")
         #if pid = os.fork():
         #    sys.exit()
