@@ -39,6 +39,8 @@ bot = Bot(command_prefix='$', intents=intents)
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
+    
+    # Keep current Python script as Background process
     if platform.system() == 'Linux':
         pid = os.fork()
         if pid:
