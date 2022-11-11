@@ -35,8 +35,15 @@ intents.message_content = True
 bot = Bot(command_prefix='$', intents=intents)
 
 
-
-
+# https://github.com/Rapptz/discord.py/blob/master/examples/basic_bot.py
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user} (ID: {bot.user.id})')
+    if platform.system() == 'Linux':
+        pid = os.fork()
+        if pid:
+            with open(current_script_directory + '/data/discord_bot_pid.txt', 'w') as file:
+            sys.exit()
 
 
 
@@ -49,10 +56,12 @@ try:
     if platform.system() == 'Windows':
         bot.run(TOKEN)
         
-    if platform.system() == 'Linux':
-        pid = os.fork(bot.run(TOKEN))
 
     print("4. End of Successful Run of the bot.")
+    # Linux:
+    # Check if pid is not running
+    # Remove the pid as it is not running anymore.
+    # os.remove(current_script_directory + '/data/discord_bot_pid.txt')
     
 except discord.errors.LoginFailure:
     print("The wrong credentials are passed.")
