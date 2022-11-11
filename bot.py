@@ -20,7 +20,7 @@ except FileNotFoundError:
         
 print("2. Overseeing platform specific tweaks")
 if platform.system() == 'Windows':
-    print("Applying tweak for Windows Operating System.")
+    print("  Applying tweak for Windows Operating System.")
     import asyncio
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
         
