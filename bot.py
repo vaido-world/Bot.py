@@ -41,7 +41,7 @@ async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     
     # Show Bot Presence status.
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="to you."))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you."))
     
     # Keep current Python script as Background process
     if platform.system() == 'Linux':
