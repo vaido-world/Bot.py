@@ -40,11 +40,15 @@ bot = Bot(command_prefix='$', intents=intents)
 async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     
+    # Show Bot Presence status.
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="to you."))
+    
     # Keep current Python script as Background process
     if platform.system() == 'Linux':
         pid = os.fork()
         if pid:
             with open(current_script_directory + '/data/linux_discord_bot_pid.txt', 'w') as file:
+                file.write(pid)
             sys.exit()
 
 
