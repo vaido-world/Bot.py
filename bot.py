@@ -42,7 +42,7 @@ async def on_ready():
     if platform.system() == 'Linux':
         pid = os.fork()
         if pid:
-            with open(current_script_directory + '/data/discord_bot_pid.txt', 'w') as file:
+            with open(current_script_directory + '/data/linux_discord_bot_pid.txt', 'w') as file:
             sys.exit()
 
 
@@ -61,7 +61,7 @@ try:
     # Linux:
     # Check if pid is not running
     # Remove the pid as it is not running anymore.
-    # os.remove(current_script_directory + '/data/discord_bot_pid.txt')
+    # os.remove(current_script_directory + '/data/linux_discord_bot_pid.txt')
     
 except discord.errors.LoginFailure:
     print("The wrong credentials are passed.")
