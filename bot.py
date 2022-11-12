@@ -1,5 +1,6 @@
 import os
 import platform
+import sys
 
 print()
 print("Released into Public Domain. No rights reserved. ")
@@ -48,8 +49,9 @@ async def on_ready():
         pid = os.fork()
         if pid:
             with open(current_script_directory + '/data/linux_discord_bot_pid.txt', 'w') as file:
-                file.write(pid)
-            sys.exit()
+                file.write(str(pid))
+            os._exit
+            #sys.exit()
 
 
 
@@ -59,8 +61,8 @@ async def on_ready():
 
 try:
     print("3. Starting to run the Bot.py")
-    if platform.system() == 'Windows':
-        bot.run(TOKEN)
+    
+    bot.run(TOKEN)
         
 
     print("4. End of Successful Run of the bot.")
