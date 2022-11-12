@@ -45,21 +45,24 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you."))
     
     if platform.system() == 'Linux':
-        print("starting a new process")
-        # Check if running
-        if os.path.exists('./data/pid.txt'):
-            with open('./data/pid.txt', 'r') as file:
-                pid = file.read()
-            if not os.path.isdir('/proc/{}'.format(pid)):
-                os.system('nohup python3 ./bot.py > bot.log 2>&1 & echo $! > ./data/pid.txt &')
+        import os
+        # Try to bring bot to the background by forking.
+        
+        pid = os.fork()
+        if pid == 0:
+            print("I'm {}, a newborn that knows to write to the terminal!".format(os.getpid()))
+
         else:
-            os.system('nohup python3 ./bot.py > bot.log 2>&1 & echo $! > ./data/pid.txt &')
-            
-            with open('./data/pid.txt', 'r') as file:
-                pid = file.read()
-            await bot.close()
+            print("I'm the dad of {}, and he knows to use the terminal!".format(pid))
+            os.waitpid(pid, 0)
         
-        
+    
+    
+        if pid:
+            with open(current_script_directory + '/data/linux_discord_bot_pid.txt', 'w') as file:
+                file.write(str(pid))
+            print("Trying to exit process")
+            os._exit(0)
 
 
 
