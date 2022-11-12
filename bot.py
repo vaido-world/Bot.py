@@ -50,7 +50,8 @@ async def on_ready():
         if pid:
             with open(current_script_directory + '/data/linux_discord_bot_pid.txt', 'w') as file:
                 file.write(str(pid))
-            os._exit
+            print("Trying to exit process")
+            os._exit(0)
             #sys.exit()
 
 
