@@ -1,0 +1,15 @@
+    # # Keep current Python script as Background process
+    # if platform.system() == 'Linux':
+    #     pid = os.fork()
+    #     if pid == 0:
+    #         # Child
+    #         os.setsid()  # This creates a new session
+    #         print("In background:", os.getpid())
+    # 
+    #         # Fun stuff to run in background
+    # 
+    #     else:
+    #         # Parent
+    #         print("In foreground:", os.getpid())
+    #         exit()
+    # 
