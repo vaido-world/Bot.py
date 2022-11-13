@@ -24,7 +24,19 @@ if platform.system() == 'Windows':
     print("  Applying tweak for Windows Operating System.")
     import asyncio
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-        
+    
+print("Checking if bot process is already running.")
+if os.path.exists('./data/pid.txt'):
+    print("Previous bot PID was found.")
+    with open('./data/pid.txt', 'r') as file:
+        pid = file.read().strip()
+    print("Previous PID: " + pid )
+    print("Previous PID running?:" + str(os.path.isdir('/proc/' + pid)))
+    if os.path.isdir('/proc/' + pid):
+        print("Bot process is already running.")
+        print("Please shut it down before running a new one.")
+        sys.exit(0)
+
     
 from discord.ext.commands import *
 import discord
@@ -45,19 +57,28 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you."))
     
     if platform.system() == 'Linux':
-        print("starting a new process")
-        # Check if running
+        print("Starting a new background process")
         if os.path.exists('./data/pid.txt'):
+            print("Previous bot PID was found.")
             with open('./data/pid.txt', 'r') as file:
-                pid = file.read()
-            if not os.path.isdir('/proc/{}'.format(pid)):
+                pid = file.read().strip()
+            print("Previous PID: " + pid )
+            print("Previous PID running?:" + str(os.path.isdir('/proc/' + pid)))
+            if not os.path.isdir('/proc/' + pid):
+                print("Starting the bot as a background process.")
                 os.system('nohup python3 ./bot.py > bot.log 2>&1 & echo $! > ./data/pid.txt &')
-        else:
-            os.system('nohup python3 ./bot.py > bot.log 2>&1 & echo $! > ./data/pid.txt &')
-            
-            with open('./data/pid.txt', 'r') as file:
-                pid = file.read()
-            await bot.close()
+                os._exit(0)
+
+           # if not os.path.isdir('/proc/{}'.format(pid)):
+           
+           #     pass
+               # 
+        #else:
+        #    #os.system('nohup python3 ./bot.py > bot.log 2>&1 & echo $! > ./data/pid.txt &')
+        #    
+        #    with open('./data/pid.txt', 'r') as file:
+        #        pid = file.read()
+        #    await bot.close()
         
         
 
