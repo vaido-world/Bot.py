@@ -69,6 +69,11 @@ async def on_ready():
                 print("Starting the bot as a background process.")
                 os.system('nohup python3 ./bot.py > bot.log 2>&1 & echo $! > ./data/pid.txt &')
                 os._exit(0)
+        if not os.path.exists('./data/pid.txt'):
+                print("Starting the bot as a background process.")
+                os.system('nohup python3 ./bot.py > bot.log 2>&1 & echo $! > ./data/pid.txt &')
+                os._exit(0)
+        # TODO: Kill the process
 
            # if not os.path.isdir('/proc/{}'.format(pid)):
            
