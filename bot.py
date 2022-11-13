@@ -24,18 +24,19 @@ if platform.system() == 'Windows':
     print("  Applying tweak for Windows Operating System.")
     import asyncio
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    
-print("Checking if bot process is already running.")
-if os.path.exists('./data/pid.txt'):
-    print("Previous bot PID was found.")
-    with open('./data/pid.txt', 'r') as file:
-        pid = file.read().strip()
-    print("Previous PID: " + pid )
-    print("Previous PID running?:" + str(os.path.isdir('/proc/' + pid)))
-    if os.path.isdir('/proc/' + pid):
-        print("Bot process is already running.")
-        print("Please shut it down before running a new one.")
-        sys.exit(0)
+
+if platform.system() == 'Linux':    
+    print("Checking if bot process is already running.")
+    if os.path.exists('./data/pid.txt'):
+        print("Previous bot PID was found.")
+        with open('./data/pid.txt', 'r') as file:
+            pid = file.read().strip()
+        print("Previous PID: " + pid )
+        print("Previous PID running?:" + str(os.path.isdir('/proc/' + pid)))
+        if os.path.isdir('/proc/' + pid):
+            print("Bot process is already running.")
+            print("Please shut it down before running a new one.")
+            sys.exit(0)
 
     
 from discord.ext.commands import *
