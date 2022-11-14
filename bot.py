@@ -46,7 +46,11 @@ intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
 
-bot = Bot(command_prefix='$', intents=intents)
+bot = Bot(
+            command_prefix='$', 
+            intents=intents,
+            activity=discord.Activity(type=discord.ActivityType.listening, name="starting")
+        )
 
 
 # https://github.com/Rapptz/discord.py/blob/master/examples/basic_bot.py
@@ -55,7 +59,7 @@ async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     
     # Show Bot Presence status.
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you."))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you"))
     
     if platform.system() == 'Linux':
         print("Starting a new background process")
