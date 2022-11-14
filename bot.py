@@ -49,7 +49,7 @@ intents.message_content = True
 bot = Bot(
             command_prefix='$', 
             intents=intents,
-            activity=discord.Activity(type=discord.ActivityType.listening, name="starting")
+            activity=discord.Activity(type=discord.ActivityType.listening, name="In progress.")
         )
 
 
@@ -59,7 +59,18 @@ async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
     
     # Show Bot Presence status.
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you"))
+    import time
+    start_time=time.time() 
+    
+    activity = discord.Activity(
+        type    = discord.ActivityType.playing, 
+        details = "AAAAAAAAAA",
+        buttons = ["test"],
+        assets  = {'small_image' : 'bot_avatar_large', 'small_text' : 'image'},
+        name    = "with you",
+    )
+    await bot.change_presence(activity=activity)
+    #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you"))
     
     if platform.system() == 'Linux':
         print("Starting a new background process")
