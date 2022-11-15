@@ -63,11 +63,24 @@ async def on_ready():
     start_time=time.time() 
     
     activity = discord.Activity(
-        type    = discord.ActivityType.playing, 
-        details = "AAAAAAAAAA",
-        buttons = ["test"],
-        assets  = {'small_image' : 'bot_avatar_large', 'small_text' : 'image'},
-        name    = "with you",
+        application_id = None,
+        assets = None,
+        buttons = None,
+        details = None,
+        emoji = None,
+        end = None,
+        large_image_text = None,
+        large_image_url = None,
+        name="with you",
+        party = None,
+        small_image_text = None,
+        small_image_url = None,
+        start = None,
+        state = None,
+        timestamps = None,
+        type = discord.ActivityType.playing,
+        url = None
+
     )
     await bot.change_presence(activity=activity)
     #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="you"))
