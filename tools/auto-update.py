@@ -1,5 +1,5 @@
 import os
-os.chdir("Bot.py")
+os.chdir("../")
 
 os.system("git remote update")
 
