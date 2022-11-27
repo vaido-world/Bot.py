@@ -1,5 +1,5 @@
 This project was discontinued and archived.  
-Please refer to revolt.chat for alternative.  
+Please refer to [revolt.chat](https://revolt.chat/) for alternative chat platform.  
 
 ![image](https://user-images.githubusercontent.com/21064622/200129183-0b561a7d-a453-4f1e-a045-c2ae40bb9891.png)
 A basic bot with features like: Member Welcome and Member Quit messages. 
